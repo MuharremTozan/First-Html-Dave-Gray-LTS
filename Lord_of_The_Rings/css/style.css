@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+
+
+header {
+    font-family: "Pacifico", sans-serif;
+    font-size:xx-large;
+    border: 5px solid black;
+    border-radius: 4rem;
+    max-width: 500px;
+    margin: 4% auto 0 auto;
+}
+
+body {
+    font-family: "Cinzel", sans-serif;
+    font-size: larger;
+    background-image: url("../img/Lotr_background.jpg");
+}
+
+h1 {
+    padding: 1rem 0 1rem 0 ;
+    background-color: black;
+    border-radius: 3.5rem 3.5rem 0 0;
+    color: rgb(190, 160, 22);
+}
+
+li {
+    list-style-type: none;
+    border-top: 2px solid rgb(0, 0, 0);
+    padding: 0 0 0 0;
+}
+
+footer{
+    color:snow;
+}
+footer a,
+footer a:visited {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+.Gondor {
+    background-color:rgb(37, 37, 37);
+    color: white;
+    padding: 0.3rem 0 1.3rem 0;
+}
+.Rohan {
+    background-color: green;
+    color: goldenrod;
+    padding: 0.3rem 0 1.3rem 0;
+}
+.Rivendell {
+    background-color: cadetblue;
+    color: white;
+    padding: 0.3rem 0 1.3rem 0;
+}
+.Mordor {
+    background-color: rgb(20, 20, 20);
+    color: darkred;
+    padding: 0.3rem 0 1.3rem 0;
+}
+.Angmar {
+    background-color: rgb(29, 29, 29);
+    color: rgb(155, 0, 0);
+    padding: 0.3rem 0 1.3rem 0;
+    border-radius: 0 0 3.5rem 3.5rem;
+}
+
+ul a,
+ul a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul .Gondor:hover{
+    color: rgb(0, 0, 0);
+    background-image: url("../img/gondor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ul .Rohan:hover{
+    color: black;
+    background-image: url("../img/rohan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ul .Rivendell:hover{
+    color: black;
+    background-image: url("../img/rivendell.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ul .Mordor:hover{
+    color: black;
+    background-image: url("../img/mordor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ul .Angmar:hover{
+    color: black;
+    background-image: url("../img/angmar.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
