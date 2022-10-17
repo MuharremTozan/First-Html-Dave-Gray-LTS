@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* ||RESET */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+   /* Eger burada height auto vermezsek htmlde vedigimiz 500px de kalir resimler bu yuzden istedigimiz gibi kullanamayiz. */
+}
+
+/* ||UTILITY CLASSES */
+.nowrap {
+   white-space: nowrap;
+}
+
+
+/* ||GENERAL STYLES */
+body {
+   font: 1.5rem "Nunito", sans-serif;
+   min-height: 100vh;
+   background-color: #475569;
+   background-image: radial-gradient(whitesmoke, #475569);
+   display: flex;
+   flex-direction: column;
+
+}
+
+header,
+footer {
+   position: sticky;
+   background-color: #1e293b;
+   color: whitesmoke;
+   text-align: center;
+   z-index: 1;
+   /* z index katman belirlememize olanak saglar bu sayede css le ekleyecegimiz zart zurtlar daha rahat katmanlasip ustte durma problemi kalmaz. */
+}
+
+header {
+   top: 0;
+}
+
+footer {
+   bottom: 0;
+}
+
+main {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem;
+   padding: 1rem;
+}
+
+nav {
+   background-color: #fff;
+   padding: 0.5rem;
+   border-bottom: 2px solid #000;
+   font-weight: bolder;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+nav a:any-link{
+   color: #000;
+}
+
+/* Burada any link diyerek hem link hem visitedi kastetmis bulunduk. */
+
+/* nav a:link,
+nav a:visited {
+   color: #000;
+} */
+
+nav a:active {
+   color: red;
+}
+
+/* link ustune tiklanirken kirmizi olmasini saglar. */
+
+nav :is(a:hover, a:focus) {
+   color: hsla(0, 0%, 20%, 0.6);
+}
+
+/* is, psuedo selector ve bu sayede psudeo classlari ayni degerlere sahip olacaklarsa beraber yazmamizi saglar. */
+/* is kullanirken dikkat edilmesi gereken kisim class ve elementin specifity sirasidir. is yazildigi zaman direkt en yuksek oncelik kimdeyse isin icindeki diger seylerde onun onceligine esitlenir. */
+
+/* ||PROFILE CARD */
+.card {
+   scroll-margin-top: 8rem;
+   /* Burada biz sitede bir isme tikladigimizda kisiye scrollandigimizda en ust kisimdan cardin baslayacagi eyre margin ekliyoruz ki fotograf bizim nav kisminin falan arkasinda kalmasin. */
+   width: min(100%, 350px);
+   /* Bu da resmin her zaman %100 buyuklukte olmasini saglar. Ama en fazla 350px buyumesini saglar. */
+   background-color: #cbd5e1;
+   border: 2px solid #000;
+   border-radius: 15px;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card:target {
+   border: 4px solid goldenrod;
+}
+/* Target psudeo classi sayesinde en son secilen yani islem uygulanan karda sadece islem uygulanacak. */
+
+.card img[alt] {
+   border: 5px groove rgb(195, 0, 255);
+}
+/* card classinda img atadigimiz seylerin alt ozelligi kullanilmissa bu ozellik ise yarayacak biz mesela isim atamistik alt yazip o yuzden hepsinde bu durum gerceklesecek. */
+.card img:not([alt]) {
+   border: #000 2px solid;
+}
+/* Burada da alt bulunmayanlari secmek icin not yazdik. */
+
+/* .card:nth-child(odd) {
+   border: 10px solid black;
+} */
+/* Burada card classinin kacinci urunlerine islem gorecegi yaziliyor ben tek sayi olanlari sectim bu yuzden 1 ve 3 uncu card secim uygulandi. */
+
+
+.card figure {
+   display: flex;
+   flex-flow: column nowrap;
+}
+
+.card img {
+   border: 5px double #333;
+   border-radius: 50%;
+}
+
+.card figcaption {
+   font-weight: bolder;
+   font-size: 2rem;
+   margin: 1rem;
+   text-align: center;
+}
+
+.card figcaption::after {
+   content: '🤞';
+   display: block;
+}
+/* figcaptiondan sonra calisip eklenecek kodlar buraya yazilir. */
+
+/* ||SMALL */
+@media screen and (min-width: 576px) {
+   main {
+      justify-content: center;
+      flex-flow: row wrap;
+      padding: 1rem;
+   }
+
+   .card {
+      width: min(100%, 400px);
+   }
+
+   .card:last-child {
+      order: -1
+   }
+}

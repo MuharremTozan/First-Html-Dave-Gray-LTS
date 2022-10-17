@@ -1,0 +1,203 @@
+@import url('googlefonts');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Block level elements bütün bir satırı kaplar içinde tek bir karakter olsa bile.
+İnline da ise block gibi sınırlandırılmak yerine diğer blockların üstüne geçebilen onları kapatabilen bir hal alıyor.
+İnline-block ise ikisinin karışımı yani block gibi tüm satırı ele almak yerine inline gibi sadece contenti ele alıyor ancak inline gibi başka blockların üstüne geçmek yerine block level gibi diğerlerine karışamaz halde oluyor.
+ */
+
+/*background-image: url("../img/Lotr_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;*/
+
+body {
+  margin: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+
+/*
+.articles {
+    color: blueviolet;
+    font-size: 25px;
+}
+
+.ea {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+body {
+    background: plum;
+    color:rgb(12, 43, 43);
+}
+*/
+/* h1 {
+    border: 3px dashed rebeccapurple;
+    width: 15%;
+} */
+
+/*rem orjinali çarpıp üstüne ekleme modeli. Örneğin font size normalde 16px ise 0.5 rem 24px demektir. 1 rem ise 32px demektir. rem=root element bu yüzden katlanarak artmaz. em=roottan beslenmez bu yüzden katlanarak artar.
+ch=karakterdir.*/
+/*
+p {
+    font-size: 1rem;
+    border: 0.2rem dashed salmon;
+    padding: 0.5rem;
+    width: 31ch;
+}
+*/
+/*
+box {
+    box-sizing: border-box; bu box size ı borderlara göre hesaplatır.
+    box-sizing: content-box; bu da içindeki contente göre hesaplatır.
+}
+*/
+/*
+h1 {
+    border: 5px solid green;
+    width: 11%;
+    outline: 5px solid purple;
+}*/
+/*border radius ovalleştirmeyi sağlıyor.*/
+/*.circle {
+    background-color: cyan;
+    width: 110px; height: 110px;
+    border: 2px solid black;
+    border-radius: 40px;
+}
+
+.circlep {
+    color:darkmagenta;
+    font-size: larger;
+    padding-top: 25%;
+    padding-left: 7%;
+    margin: 0px;
+}
+
+.circlep2 {
+    color:darkmagenta;
+    font-size: larger;
+    padding-bottom: 20%;
+    padding-left: 28%;
+    margin: 0px;
+}
+*/
+
+body {
+  padding: 10%;
+  padding-top: 5%;
+}
+
+/*align yazının sağdan soldan dayalı ya da justify gibi kutu içinde hatları keskin durmasını sağlar*/
+/*line height satırlar arası boşluğu açarak yazıyı daha okunabilir kılır.*/
+/*font weight boldluğu ayarlar.*/
+p {
+  text-align: justify;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+a {
+  color: greenyellow;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(220, 20, 203);
+}
+
+a:hover {
+  color: darkcyan;
+}
+
+a:active {
+  color: red;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+ul {
+  /*list-style-image: url("../img/Sprite-Wizard_Hat.png");*/
+  text-align: center;
+  color: rgb(21, 88, 15);
+  /*list-style: square url("../img/Sprite-Wizard_Hat.png") inside;*/
+}
+
+ul ::marker {
+  content: "Hi guys!";
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: blue;
+}
+
+
+.leftblock {
+  float: left;
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+.rightblock {
+  float: right;
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/*Float yazdığımız yazıları vs yüzdürüp lokasyon belirtmemize yarıyor. Resim yanından başlayan yazı vs yapılabilir bununla.*/
+
+/* .clear {
+    clear: left;
+}
+ */
+/*clear boşluğu hiç şekilde doldurmaya yarar. Bu sayede yüzen cismin arkaplanının boş kalması gibi durumlar oluşmaz gereken kısmı boşlukla doldurabilirsin.*/
+
+/*display:flow-root  zaten halihazırda clearın yaptığını yapıp cleara ihtiyaç duymamayı sağlıyor. */
+
+.column {
+  columns: 4 auto;
+  column-rule: 3px solid black;
+  column-gap: 3rem;
+  /* column gap sütunların arasıdnaki açıklığı ayarlar. rule ise divider görevi görür.*/
+}
+
+.column h2 {
+  margin-top: 0;
+  background-color: bisque;
+  color: brown;
+  padding: 1rem;
+  break-inside: avoid;
+  /*break inside farklı çözünürlüklerde bu h2nin columnlar arası paylaşılmasını engeller bu sayede parçalı görünüm oluşmaz.*/
+}
+
+.column .quote {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: blueviolet;
+  column-span: all;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

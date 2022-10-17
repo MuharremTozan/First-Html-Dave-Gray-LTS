@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+   font-size: 1.5rem;
+   min-height: 2000vh;
+}
+
+.outer-container {
+   border: 3px dashed #000;
+   width: 75vw;
+   height: 85vh;
+   margin: 40px auto;
+}
+
+.inner-container {
+   border: 2px solid #00f;
+   width: 40vw;
+   height: 50vh;
+   margin: 200px auto;
+
+   /*buradaki positionı parent yapıyor absolute gibi değerler için.*/
+}
+
+.box {
+   width: 150px;
+   height: 150px;
+   color: #fff;
+   padding: 1rem;
+}
+
+.absolute {
+   background-color: bisque;
+   position: absolute;
+   top: 0;
+   right: 0;
+   /* absolute parent değer arar(buradaki top right gibi ya da bu classın üstünde başka classların tanımlayacağı positionlar gibi.) Ve bu değeri aynen yansıtır.*/
+}
+
+.relative {
+   background-color: darkkhaki;
+   position: relative;
+   top: 400px;
+   /* inner containerdan itibaren 400px saymaya başladı.*/
+}
+
+.fixed {
+   background-color: aquamarine;
+   position: fixed;
+   top: 245px;
+   z-index: 1;
+   /* Fixed ekranda hep aynı pixellerde kalmasını sağlar nesnenin. Yani navbar yapıyorsun ama hep sayfanın yukarısında duruyor gibi. */
+   /* z index önceliği belirliyor bu sayede navbarı daha yukarıda tutabilirsin mesela. */
+}
+
+.sticky {
+   background-color: crimson;
+   position: sticky;
+   top: 0;
+   /* sticky bir yere kadar nesnenin olması gereken yerde durmasını sağlayı aşağı yukarı kaydırınca sayfayı sizin istediğiniz bölgeye sayfayla beraber yapışarak kaymasını sağlar. */
+}
+
+/* html{ scroll-behavior: smooth;} böyle yapınca linklediğimiz herhangi bir yere giderken scrolla daha smooth şekilde gitmiş oluyoruz. Işınlanmıyoruz. */

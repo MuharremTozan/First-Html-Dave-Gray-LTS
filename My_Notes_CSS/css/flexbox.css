@@ -1,0 +1,81 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   padding: 20px;
+}
+
+.container {
+   max-width: 800px;
+   min-height: 400px;
+   margin-inline: auto;
+   /* margin inline auto sağdan ve soldan eşit şekilde margin bırakmamıza yarıyor */
+   border: 1px solid black;
+   display: flex;
+   /* flex soldan sağa olan düzeni yukarıdan aşağıya yaparak flex düzeni aldırır. */
+
+   justify-content: space-between;
+   /* justify-content: flex-start or flex-end or center; */
+   /* bu sayede contenti başlangıçtan yani soldan ya da sondan yani sağdan başlatabiliyoruz. Ama hala yuakrıdan aşağıya doğru. Ya da center yapıp ortadan başlatabiliriz. */
+
+   /* justify-content: space-around or space-between;
+   böyle yapınca contentler arası boşluk oluşturuluyor. Space between ise başa ve sona yapışık aralarında boşluk olan kısımlar oluşturur. */
+
+   gap: 1rem;
+   /*Gap contentler sütunalr arasına boşluk koymamızı sağlar.*/
+
+   align-items: center;
+   /*Bu ise itemlerın ortadan başlamasını sağlar.
+   align-items: flex-end;
+   Burada itemler yukarıdan değil aşağıdan başlıyor ancak hala soldan sağa şeklinde.
+   align-items: flex-start;
+   Burada itemler soldan başlar.*/
+
+   flex-direction: row;
+   /* Row yapınca normal yazma modunuz neyse ona göre şekil alır. Örneğin latin alfabesinde soldan sağa yazılacağı için soldan sağa şeklinde yazılır.
+   flex-direction: row-reverse;
+   Eğer row reverse yaparsak yazım dilimizin tersine göre sıralanmaya başlar.
+   flex-direction: column ;
+   Burada flex yönümüzü column yaparak sütun gibi hareket etmesini sağladık. */
+
+   flex-wrap: wrap;
+   /* Bu sayede sayfa farklı pixelde ölçeklendiği zaman birbirlerine tutunmuş olan itemlar sayfayla beraber ölçeklenir. */
+
+   /* flex-flow: row wrap; */
+}
+
+.box {
+   min-width: 100px;
+   height: 100px;
+   background-color: black;
+   color: white;
+   font-size: 2rem;
+   padding: 0.5rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   flex-basis: 200px;
+   /*Flexible item widthi bu şekilde ayarlanıyor.*/
+
+   flex-grow: 1;
+   /* burada içinde bulunduğumuz itemın içinde büyümemizi sağlıyor. Matematiği şöyle çalışıyor 2 item var birine 1 birine 2 verirsek bütün alan 3 parçaya bölünüyor birine 3te1 i diğerine 3te2 si düşüyor. */
+
+   /*flex-shrink:1;
+   Shrink wrap olmadığı zaman sayfayı daralttığımızda hangi itemin daha çok daralacağını belirler. Bu durumda 2. item daha fazla daralacaktır.*/
+
+   /*flex: 1 1 150px;
+   Flex daralırken ve genişlerken ne kadar katsayıyla yapıalcağını belirler yani daha yüksek değeri olan item daha fazla daralır daha fazla genişler.*/
+}
+
+/*.box:nth-child(2) {
+   flex-shrink:2;
+   flex: 2 2 150px;
+   order: -1 or 0 or 2;
+   Order itemları sıralamamıza yarar. 0 koyarsan normal yerinde pozitif sayı koyarsan kendi aralarında negatif koyarsan kendi aralarında sıralanırlar.
+}*/

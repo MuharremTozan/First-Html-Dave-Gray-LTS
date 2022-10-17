@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Burada doc type belirtmeli ve sayfanın dilini belirtmeliyiz.-->
+    
+    <head>
+    <!-- Head sayfanın içine veri çekebileceğimiz ayrıca metadata ayarlarıyla oynayabileceğimiz yer. -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Muharrem Tozan">
+        <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML.">
+        
+        <title>Main Page</title>
+
+        <link rel="icon" href="img/Wizard_Hat.png" type="image/x-icon">
+        <link rel="stylesheet" href="/My_Notes/css/main.css" type="text/css">
+        <!-- Burada çektiğimiz verilerin alakasını ve tipini belirliyoruz. -->
+    </head>
+
+    <body>
+<header>
+        <a href="/"><h1>Hello World!</h1></a>
+        <!--"/"root directory i temsil eder.-->
+        <hr>
+        <!-- hr horizontal çubuk çeker. -->
+
+        <nav aria-label="primary-nav">
+            <ol>
+                <li><a href="#First_World">First Section</a></li>
+                <li><a href="#Second_World">Second Section</a></li>
+                <li><a href="#Contact_Me">Contact Me</a></li>
+            </ol>
+        </nav>
+    </header>
+<!--nav semantic bir bölgelemedir.-->
+<!--Header ise sayfanın header bölgesidir semantictir.-->
+
+<main> <!--header gibi ama main kısmı-->
+        <hr>
+<section id="First_World">
+<!--Section semantik bir işaretlemedir. Temel olarak bölümlendirmeye yarar. İleride linkleyebilirsin.-->
+<!--Aralarda boşluk bırakma!-->
+<!--Her sectionın kendine ait headingi olsun!-->
+<!-- TODO change this pragraph -->        
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut recusandae dolorum impedit quisquam! Illo, voluptatem quo ea quae atque voluptas at nulla repudiandae necessitatibus sit vero, a fugiat aliquam voluptate! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, in voluptatum ex officia ducimus odit nisi veniam non, sequi alias nemo ea et, nobis quis nihil exercitationem ipsam tempore v</p>
+<figure>
+<img src="img/pixel-wizard-ultimate-edition-cover-4158055988.png" alt="epic wizard background image" width="500" height="250" loading="lazy" title="selam">
+<figcaption>Wizard 1600's (Colorized)</figcaption>
+</figure>
+<!--alt attribute'i ile resimimizin görünemediği ortamlarda yerine yazması gereken şeyi belirtiyoruz.-->
+<!--CSS için width ve height ı eklemeyi unutma.--> 
+<!--Loading lazy hemen yüklenmemesini sağlayıp fotoğrafı görünce yüklenmesini sağlıyor bu sayede daha performanslı ve az internet harcayan sayfa.-->
+<!--Figure sayesinde figcaption ekliyoruz ve direkt resme entegreli altına yazı yazabiliyoruz.-->
+<!--title resmin üzerine mouse getirip beklediğimizde çıkan yazı.-->
+<hr>
+        <h3>This is List Section</h3>
+        <p>Which fruits are great for me:</p>
+        <ol>
+            <li>Banana</li>
+            <li>Kiwi</li>
+            <li>Cherry</li>
+            <li>Plum</li>
+            <li>Hello <abbr title="It's most used search engine"> <a href="https://www.google.com">GOOGLE</a> </abbr> </li>
+        </ol>
+        <ul>
+            <li>This is unordered list.</li>
+            <li>It's not have any number.</li>
+        </ul>
+        <br>
+
+        <p>This is description list!</p>
+        <dl>
+            <dt>This fruits are good!</dt>
+            <dd>Because this fruits are <strong>sour</strong> or <strong>healthy</strong>. </dd>
+        </dl>
+        <!-- description tanım, tarif, açıklama yapmaya yarar. -->
+</section>
+</main>        
+<hr>
+<section id="Second_World">
+        <h2>Second World!</h2>
+<hr>
+        
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nisi, eum architecto nihil aliquid voluptatibus maxime odio eaque cum sed consequuntur ea in quas assumenda 
+            iusto minus vel autem rerum.
+        </p>
+</section>
+<hr>
+<section id="Table_World">
+    <h2>Marvel Superheroes</h2>
+    <!--colspan yatay rowspan dikey şekilde birleştirmeye yarar. tr satır td sütundur. th td nin header halidir.-->
+    <!--caption komple bir başlık gibidir otomatik colspan yapar-->
+<table>
+    <caption>SuperHeroe Database</caption>
+
+    <thead>
+    <tr>
+        <th>&nbsp;No</th>
+        <th scope="row">Name</th>
+        <th scope="row">Surname</th>
+        <th scope="row">Abilities</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <th>0</th>
+        <td>Tony</td>
+        <td>Stark</td>
+        <td>İntelligence</td>
+    </tr>
+    <tr>
+        <th>1</th>
+        <td>Natasha</td>
+        <td>Romanov</td>
+        <td>Manuplation</td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Steve</td>
+        <td>Rogers</td>
+        <td>Durability</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Other SuperHeroes</td>
+        <td colspan="2">Muharrem Tozan</td>
+        <td>BloodWizard</td>
+    </tr>
+    <tr>
+        <td colspan="3">WIP</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+        <td colspan="4">This is the database footer section!</td>
+        </tr>
+    </tfoot>
+
+</table>
+</section>
+<hr>
+
+<section id="Contact_Me">
+<!--autocomplete sonradan doldurmayı hatırlamak için-->
+<!--required submit etmeden zorunlu şekilde yazmamızı sağlar.-->
+<!--get bilgileri urlye yazar bu yüzden güvenilir değildir.-->
+<!--post bilgileri saklar bu yüzden gizlidir.-->
+    <h2>Contact Me</h2>
+    <p>Please give me a message for this website :)</p>
+<fieldset>
+    <legend>Your Info</legend>
+
+    <form action="https://httpbin.org/get" method="get">
+        <label for="YourName">Your Name : </label>
+        <input type="text" name="YourName" id="YourName" placeholder="Your Name"
+        autocomplete="on" required>
+    
+
+    <form action="https://httpbin.org/get" method="get">
+        <label for="Email">Email : </label>
+        <input type="text" name="Email" id="Email" placeholder="Email"
+        autocomplete="on" required>
+    
+
+    <form action="https://httpbin.org/get" method="get">
+        <label for="Password">Password : </label>
+        <input type="password" name="Password" id="Password" placeholder="Password"
+        autocomplete="on" required>
+    
+
+    <form action="https://httpbin.org/get" method="get">
+        <label for="decade">Decade : </label>
+        <input type="number" name="decade" id="decade" min="1900" max="2020" step="10" value="2020">
+    
+
+
+        <label for="coffee">Favorite Coffee Brew Type : </label>
+        <select name="coffee" id="coffee" >
+            <optgroup label="Big Chunks">
+            <option value="cold brew">Cold Brew</option>
+            <option value="french press">French Press</option>
+            <option value="v60">V60</option>
+            </optgroup>
+            <optgroup label="Not Big Chunks">
+            <option value="turkish coffee" selected>Turkish Coffee</option>
+            </optgroup>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for="games">Favorite Games : </label>
+        <input type="text" name="games" id="games" list="game-list">
+        <datalist id="game-list">
+                <option value="Spiderman">
+                <option value="God of War">
+                <option value="Red Dead Redemption 2">
+                <option value="EU4">
+                <option value="Witcher">    
+                <option value="Half Life">
+        </datalist>
+    </fieldset>
+
+    <fieldset>
+        <legend>Foods?</legend>
+        <input type="radio" name="food" id="pizza" value="pizza">
+        <label for="pizza">Pizza</label>
+
+        <input type="radio" name="food" id="kebab" value="kebab">
+        <label for="kebab">Kebab</label>
+
+        <input type="radio" name="food" id="hamburger" value="hamburger">
+        <label for="hamburger">Hamburger</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Do You Have Pets?</legend>
+            <input type="checkbox" name="pet" id="dog" value="dog">
+            <label for="dog">Dog</label>
+            
+            <input type="checkbox" name="pet" id="cat" value="cat">
+            <label for="cat">Cat</label>
+            
+            <input type="checkbox" name="pet" id="lizard" value="lizard">
+            <label for="lizard">Lizard</label>
+            
+            <input type="checkbox" name="pet" id="none" value="none" >
+            <label for="none">None</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Send Me Message!</legend>
+        <textarea name="Message" id="message" cols="40" rows="1" placeholder="Type your message..."></textarea>
+    </fieldset>
+<br>
+    <button type="submit">Submit</button>
+    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+    <button type="reset">Reset</button>
+</form>
+</section>    
+
+<hr>
+        <footer><!--sayfanın footer kısmı semantic-->
+            <p> &lt;&lt;&lt; &copy; <a href="about.html"> Muharrem Tozan </a>  &gt;&gt;&gt;</p>
+        <!-- Ampersand ile başlayanlar html entityleri. Onlarla sembol yazabiliyoruz. -->
+        <address>
+            Muğla/Menteşe
+        </address>
+        <!-- Adres tipinde kaydetmeye yarıyor. -->
+<nav aria-label="footer-nav">
+    <ul>
+        <li>For the Website icon <a href="Wizard_Hat.png" download="Muharrem's Pixel Wizard Hat">download</a>.</li>
+        <li><a href="#">Back to Top</a></li>
+        
+    </ul>
+</nav>
+</footer>
+    </body>
+
+</html>

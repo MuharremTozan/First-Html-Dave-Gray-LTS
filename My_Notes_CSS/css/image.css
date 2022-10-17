@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+img {
+   display: block;
+}
+
+/* Normalde imageler inline olurlar. Bu yuzden altlarinda bir bosluk olur. Eger block yaparsan bu bosluk gider ve etrafinda olusturdugun borderla tamamen yapisik sekilde olur. */
+
+/* Utility Classes */
+.nowrap {
+   white-space: nowrap;
+}
+
+/* Bu kelimeleri birbirinden ayirmadan kullanmak icin */
+
+.offscreen {
+   position: absolute;
+   left: -10000px;
+}
+
+/* Bu da yapim asamasinda istemedigim ogeleri disari atmak icin */
+
+
+/* End of the Utility Classes */
+
+body {
+   font-family: "Nunito", sans-serif;
+   min-height: 100vh;
+   background-color: aliceblue;
+
+
+   /* background-image: url("../img/bubbles.png"), linear-gradient(to left, steelblue, white);
+   /* Ayni anda iki ve ya daha fazla resim yerlesimi yapabiliyoruz. Burada bubble resmini koyup altina da renk degisimi birakmis olduk. */
+   /* sola dogru renk degisimi sagliyor. */
+   /* background-repeat: repeat-y, no-repeat;
+   background-position: right center; */
+   /* Bu sayede baloncuklari tamamen dizmek yerine sadece guzel gozukecek sag tarafa cekmis olduk.*/
+   /* background-size: 20%, auto; */
+
+   /* ONEMLI burada background islemlerimiz sadece bubble icin gecerli cunku ilk onu yazdik ilk yazdigimiza etki ediyor. */
+
+}
+
+
+
+.container {
+   background-color: rgb(251, 210, 156);
+   background-image: url(../img/map-2176x1451.png);
+   background-repeat: repeat;
+   background-size: cover;
+
+   /* background-position: top; burada arkada kullanacagimiz background image in neresini kullanacagimizi seciyoruz ben ust kismini tercih ettim */
+}
+
+.hero {
+   border-bottom: 2px solid black;
+   padding: 20px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 30px;
+
+   background-color: hsla(0, 0%, 0%, 0.5);
+   /* butun bir hero classina filtre giydirmis gibi olduk, biraz daha koyulastirip on planda cok olmasini engelledik. */
+   /*background-size:contain; bu direkt itemde imagela doldurabilecegini doldurup kalaninin bos kalmasini saglar.  */
+}
+
+/* Background repeat tekrarin olup olmamasini ve nasil olmasi gerektigini sorgular. */
+/* Background size imagein boyutuyla ilgilenir. Cover modu cogunlukla buyuk resimlerin ufak alanlara sigmasinda yardimci olur. Ayrica boyutu degistikce resiminde boyutu degisip coverlamaya devam etmeye calisir.*/
+
+h1 {
+   font-size: 500%;
+   color: aliceblue;
+   text-shadow: 5px 5px 5px black;
+   /* background-color: hsla(0, 0%, 0%, 0.2);
+   padding: 2rem;
+   border-radius: 50px; */
+}
+
+/* text shadow  2px x yonu 2px y yonu 5px (pixelleri arttirdikca bulaniklasip kaybolur shadow) blurry iceren siyah birsey olmali kodu. */
+/* padding ile disindaki background colora yapismamasini sagladik ve border radiusla koseleri yumustaip daha modern bir gorunus kattik. */
+
+.profile-pic-figure {
+   width: 35%;
+}
+
+.profile-pic-figure img {
+   width: 100%;
+   height: auto;
+   min-width: 100px;
+   border: 5px double gray;
+   border-radius: 35%;
+}
+
+.example {
+   margin-top: 1rem;
+   padding-left: 20px;
+   border: 1px solid red;
+}
+
+.example img {
+   width: 25%;
+   height: auto;
+}
+
+
+.clip {
+   font-weight: 800;
+   font-size: 18rem;
+   text-align: center;
+   background-image: url("../img/scenic-2200x1331.png");
+   background-size: 100%;
+   text-transform: uppercase;
+
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: rgba(0, 0, 0, 0.151);
+}
+
+/* Font weight bold yapiyor yaziyi
+text align ile ortaya aliyoruz
+background size ile arkaya attigimiz imagein tamamini goruyoruz\
+ */
+/* webkit olayi bu icerigin firefox disindakilerde native olarak gelmedigi icin kullaniyoruz soyle yapiyor yaziya attachliyor arkadaki resmi ve sen saydamlastirirsan arkadaki resim gozukmeye basliyor. */
+/* webkitlerde ikisinide kullanmakta yarar var. */
